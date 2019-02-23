@@ -1,0 +1,53 @@
+Deadline : 2 weeks ( 18th 6 pm)
+Upload your program to D2L.
+
+
+
+
+Q1) Write a CUDA program using single thread block and multiple thread blocks to 
+    do reduction (sum) on an array.
+
+ 
+OR
+ Write a CUDA program using single thread block and multiple thread blocks to 
+    do prefix sum of an array. 
+   
+
+ To implement parallel reduction/prefix sum, you can use the CREW algorithms from Chapter 2 slides.
+    
+
+
+Use comet.sdsc.edu cluster for running the CUDA program.
+    
+
+1.  Use putty if you are using windows OS to connect.
+    The server name is comet.sdsc.edu 
+    Enter account name that you provided me after creating an account on XSEDE.
+    Enter password.
+    
+// for me it is spuri2@comet.sdsc.edu
+    
+  
+
+
+2.  Compile : module load cuda  (to make nvcc work)
+  
+nvcc -o prog your_cuda_program.cu   (use the extension as "cu") 
+
+
+
+
+3.  Use cudascript.sb (attached) to submit the job. This script assumes that "prog" is
+ the name of your executable.
+
+    Submitting job to the COMET cluster :
+ sbatch cudascript.sb    
+    
+
+¡£/
+4.  To check the status of your job: 
+squeue -u your_username to check the status of your job.
+ 
+For additional details about the COMET cluster, go to
+
+http://www.sdsc.edu/support/user_guides/comet.html
